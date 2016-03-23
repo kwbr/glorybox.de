@@ -1,0 +1,28 @@
+@font-face {
+  font-family: VT220;
+  src: url(../fonts/Glass_TTY_VT220.ttf) format('truetype');
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+* {
+  background: #1c1c1c;
+  color: #eeeeec;
+  font-family: VT220;
+  font-size: 15pt
+}
+
+.cursor {
+  font-weight: bold;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
